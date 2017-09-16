@@ -24,10 +24,10 @@
       // Randomly chooses a choice from the options array. This is the Computer's guess.
       var helped = document.getElementById('help');
       guessword = document.getElementById("guess_word");
-      if(event.key ==' '&&hangman.indexOf('_')==-1){
+      if(event.key ==' '&&hangman.indexOf('_')==-1&&hangman==''){
         document.getElementById("pic").src = "assets/image/1.png";
         totalLetter = '';
-        hangman ='';
+        
         guessword.textContent = hangman;
         countLeft.textContent = 10;
         usedLetter.textContent = '';
@@ -79,7 +79,7 @@
                 alert('You win');
                 // console.log(hangman.indexOf('_'));
                 // totalLetter = '';
-                // hangman ='';
+                hangman ='';
                 // guessword.textContent = hangman;
                 // countLeft.textContent = 10;
                 // usedLetter.textContent = '';
